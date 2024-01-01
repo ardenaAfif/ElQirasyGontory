@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "342693247089",
+    "project_id": "elqirasygontory",
+    "storage_bucket": "elqirasygontory.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342693247089:android:c2056e0e45db9ecb4443d0",
+        "android_client_info": {
+          "package_name": "com.gontory.elqirasygontory"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyJ6xfdthhjFGJmDuEfAHOBmhEb0_Rur0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

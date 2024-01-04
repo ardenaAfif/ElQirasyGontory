@@ -1,4 +1,4 @@
-package com.gontory.elqirasygontory.viewmodel
+package com.gontory.elqirasygontory.ui.mutholaah
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -16,7 +16,6 @@ class MutholaahViewModel :ViewModel() {
 
     private val firestore = FirebaseFirestore.getInstance()
     private val mutholaahCollection = firestore.collection("mutholaah")
-    private val quizCollection = firestore.collectionGroup("quiz")
 
     init {
         fetchMutholaah()

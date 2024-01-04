@@ -22,6 +22,6 @@
         android:fontFamily="@font/poetsen_one"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/white"
-        android:textSize="26sp"/>
+        android:textSize="22sp"/>
 
 </androidx.appcompat.widget.Toolbar>

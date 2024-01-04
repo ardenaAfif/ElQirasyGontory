@@ -15,7 +15,6 @@ import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.adapter.MutholaahAdapter
 import com.gontory.elqirasygontory.databinding.FragmentMutholaahBinding
 import com.gontory.elqirasygontory.utils.Resource
-import com.gontory.elqirasygontory.viewmodel.MutholaahViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 class MutholaahFragment : Fragment() {

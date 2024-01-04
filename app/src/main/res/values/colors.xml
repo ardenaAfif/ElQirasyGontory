@@ -5,4 +5,7 @@
 
     <color name="red_800">#AF3068</color>
     <color name="red_500">#DE3E7A</color>
+
+    <color name="colorWrong">#B00200</color>
+    <color name="colorCorrect">#20b000</color>
 </resources>

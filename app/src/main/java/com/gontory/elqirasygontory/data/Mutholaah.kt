@@ -7,10 +7,12 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Mutholaah(
     @DocumentId
+    val mutholaahId: String,
     val urutan: Int,
     val img_url: String,
     val title: String,
-    val video_url: String
+    val video_url: String,
+    val questions: Long
 ) : Parcelable {
-    constructor(): this(0, "", "", "")
+    constructor(): this("",0, "", "", "",0)
 }

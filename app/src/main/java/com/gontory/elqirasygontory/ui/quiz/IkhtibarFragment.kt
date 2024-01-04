@@ -15,7 +15,7 @@ import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.adapter.IkhtibarAdapter
 import com.gontory.elqirasygontory.databinding.FragmentIkhtibarBinding
 import com.gontory.elqirasygontory.utils.Resource
-import com.gontory.elqirasygontory.viewmodel.MutholaahViewModel
+import com.gontory.elqirasygontory.ui.mutholaah.MutholaahViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 class IkhtibarFragment : Fragment() {

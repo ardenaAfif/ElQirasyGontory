@@ -47,5 +47,29 @@
         tools:layout="@layout/fragment_ikhtibar"
         android:id="@+id/ikhtibarFragment"
         android:name="com.gontory.elqirasygontory.ui.quiz.IkhtibarFragment"
-        android:label="IkhtibarFragment" />
+        android:label="IkhtibarFragment" >
+        <action
+            android:id="@+id/action_ikhtibarFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <argument
+            android:name="quizData"
+            app:argType="com.gontory.elqirasygontory.data.Question" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.gontory.elqirasygontory.ui.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <argument
+            android:name="QuizData"
+            app:argType="com.gontory.elqirasygontory.data.Mutholaah" />
+        <action
+            android:id="@+id/action_quizFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.gontory.elqirasygontory.ui.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
 </navigation>

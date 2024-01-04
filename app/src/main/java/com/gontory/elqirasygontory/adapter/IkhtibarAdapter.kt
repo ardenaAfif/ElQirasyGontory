@@ -13,6 +13,7 @@ import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.data.Mutholaah
 import com.gontory.elqirasygontory.databinding.ItemMutholaahBinding
 import com.gontory.elqirasygontory.ui.mutholaah.MutholaahFragmentDirections
+import com.gontory.elqirasygontory.ui.quiz.IkhtibarFragmentDirections
 
 class IkhtibarAdapter(private val context: Context):
     RecyclerView.Adapter<IkhtibarAdapter.IkhtibarViewHolder>() {
@@ -63,9 +64,9 @@ class IkhtibarAdapter(private val context: Context):
         holder.bind(mutholaah)
 
         holder.itemView.setOnClickListener {
-//            val action = MutholaahFragmentDirections.actionMutholaahFragmentToMateriActivity(mutholaah)
-//            holder.itemView.findNavController().navigate(action)
-            Toast.makeText(holder.itemView.context, "Fitur ini akan segera hadir!", Toast.LENGTH_SHORT).show()
+            val action = IkhtibarFragmentDirections.actionIkhtibarFragmentToQuizFragment(mutholaah)
+            holder.itemView.findNavController().navigate(action)
+//            Toast.makeText(holder.itemView.context, "Fitur ini akan segera hadir!", Toast.LENGTH_SHORT).show()
         }
     }
 }

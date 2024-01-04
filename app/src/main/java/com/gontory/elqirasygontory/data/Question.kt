@@ -7,6 +7,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Question(
     @DocumentId
+    val questionId: String,
     val question: String,
     val answer: String,
     val optionA: String,
@@ -15,5 +16,5 @@ data class Question(
     val optionD: String,
     val time: Long,
 ) : Parcelable {
-    constructor(): this("","", "", "", "", "", 0L)
+    constructor(): this("","", "", "", "", "", "",0L)
 }

@@ -16,7 +16,7 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.navigation.navArgs
 import com.gontory.elqirasygontory.databinding.ActivityMateriBinding
 import com.gontory.elqirasygontory.utils.Resource
-import com.gontory.elqirasygontory.viewmodel.MutholaahViewModel
+import com.gontory.elqirasygontory.ui.mutholaah.MutholaahViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 class MateriActivity : AppCompatActivity() {

@@ -71,5 +71,15 @@
         android:id="@+id/resultFragment"
         android:name="com.gontory.elqirasygontory.ui.result.ResultFragment"
         android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="QuizData"
+            app:argType="com.gontory.elqirasygontory.data.Mutholaah" />
+        <action
+            android:id="@+id/action_resultFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

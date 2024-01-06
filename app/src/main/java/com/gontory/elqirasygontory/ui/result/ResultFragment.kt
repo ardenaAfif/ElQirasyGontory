@@ -57,7 +57,11 @@ class ResultFragment : Fragment() {
         binding.apply {
             mutholaahText.text = result.title
             btnRetry.setOnClickListener {
-                findNavController().navigate(ResultFragmentDirections.actionResultFragmentToQuizFragment(result))
+                findNavController().navigate(
+                    ResultFragmentDirections.actionResultFragmentToQuizFragment(
+                        result
+                    )
+                )
             }
             btnHome.setOnClickListener {
                 findNavController().navigate(ResultFragmentDirections.actionResultFragmentToHomeFragment())

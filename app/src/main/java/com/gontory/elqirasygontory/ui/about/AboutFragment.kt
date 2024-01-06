@@ -51,7 +51,8 @@ class AboutFragment : Fragment() {
 
     private fun getVersionName(): String {
         try {
-            val packageInfo = requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
+            val packageInfo =
+                requireContext().packageManager.getPackageInfo(requireContext().packageName, 0)
             return packageInfo.versionName
         } catch (e: PackageManager.NameNotFoundException) {
             e.printStackTrace()

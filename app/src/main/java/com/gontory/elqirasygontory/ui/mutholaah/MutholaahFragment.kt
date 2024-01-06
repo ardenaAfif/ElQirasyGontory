@@ -2,11 +2,11 @@ package com.gontory.elqirasygontory.ui.mutholaah
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
@@ -40,7 +40,7 @@ class MutholaahFragment : Fragment() {
 
         lifecycleScope.launchWhenStarted {
             viewModel.mutholaahList.collectLatest {
-                when(it) {
+                when (it) {
                     is Resource.Loading -> {
                         showLoading()
                     }
@@ -66,7 +66,8 @@ class MutholaahFragment : Fragment() {
     private fun setupRvMutholaah() {
         mutholaahAdapter = MutholaahAdapter(requireContext())
         binding.rvMutholaah.apply {
-            layoutManager = GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
+            layoutManager =
+                GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
             adapter = mutholaahAdapter
         }
     }

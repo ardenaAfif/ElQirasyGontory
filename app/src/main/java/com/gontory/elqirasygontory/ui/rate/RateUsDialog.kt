@@ -1,8 +1,6 @@
 package com.gontory.elqirasygontory.ui.rate
 
 import android.content.Context
-import android.net.ConnectivityManager
-import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
@@ -13,7 +11,6 @@ import android.widget.ProgressBar
 import android.widget.RatingBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDialog
-import androidx.core.content.ContextCompat.getSystemService
 import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.data.Rating
 import com.google.firebase.firestore.FirebaseFirestore
@@ -80,7 +77,11 @@ class RateUsDialog(context: Context) : AppCompatDialog(context) {
                 .addOnFailureListener {
                     progressBar.visibility = View.GONE
                     btnSubmit.visibility = View.VISIBLE
-                    Toast.makeText(context, "Failed to sent feedback, check your connection!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        context,
+                        "Failed to sent feedback, check your connection!",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
         } else {
             Toast.makeText(context, "Please fill a feedback completely", Toast.LENGTH_SHORT).show()

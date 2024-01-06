@@ -14,8 +14,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.adapter.IkhtibarAdapter
 import com.gontory.elqirasygontory.databinding.FragmentIkhtibarBinding
-import com.gontory.elqirasygontory.utils.Resource
 import com.gontory.elqirasygontory.ui.mutholaah.MutholaahViewModel
+import com.gontory.elqirasygontory.utils.Resource
 import kotlinx.coroutines.flow.collectLatest
 
 class IkhtibarFragment : Fragment() {
@@ -44,19 +44,22 @@ class IkhtibarFragment : Fragment() {
     private fun retrieveMutholaah() {
         lifecycleScope.launchWhenStarted {
             viewModel.mutholaahList.collectLatest {
-                when(it) {
+                when (it) {
                     is Resource.Loading -> {
                         showLoading()
                     }
+
                     is Resource.Success -> {
                         mutholaahAdapter.differ.submitList(it.data)
                         hideLoading()
                     }
+
                     is Resource.Error -> {
                         hideLoading()
                         Log.e("MutholaahList", it.message.toString())
                         Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
                     }
+
                     else -> Unit
                 }
             }
@@ -66,7 +69,8 @@ class IkhtibarFragment : Fragment() {
     private fun setupRvMutholaah() {
         mutholaahAdapter = IkhtibarAdapter(requireContext())
         binding.rvMutholaah.apply {
-            layoutManager = GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
+            layoutManager =
+                GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
             adapter = mutholaahAdapter
         }
     }

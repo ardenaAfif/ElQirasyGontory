@@ -16,5 +16,5 @@ data class Question(
     val optionD: String,
     val time: Long,
 ) : Parcelable {
-    constructor(): this("","", "", "", "", "", "",0L)
+    constructor() : this("", "", "", "", "", "", "", 0L)
 }

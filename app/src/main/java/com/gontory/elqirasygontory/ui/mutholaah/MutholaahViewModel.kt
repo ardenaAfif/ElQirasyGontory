@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class MutholaahViewModel :ViewModel() {
+class MutholaahViewModel : ViewModel() {
 
     private val _mutholaahList = MutableStateFlow<Resource<List<Mutholaah>>>(Resource.Unspecified())
     val mutholaahList: StateFlow<Resource<List<Mutholaah>>> = _mutholaahList

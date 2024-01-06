@@ -15,8 +15,8 @@ import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.navigation.navArgs
 import com.gontory.elqirasygontory.databinding.ActivityMateriBinding
-import com.gontory.elqirasygontory.utils.Resource
 import com.gontory.elqirasygontory.ui.mutholaah.MutholaahViewModel
+import com.gontory.elqirasygontory.utils.Resource
 import kotlinx.coroutines.flow.collectLatest
 
 class MateriActivity : AppCompatActivity() {
@@ -47,7 +47,7 @@ class MateriActivity : AppCompatActivity() {
     private fun retrieveVideo() {
         lifecycleScope.launchWhenStarted {
             mutholaahViewModel.mutholaahList.collectLatest { resource ->
-                when(resource) {
+                when (resource) {
                     is Resource.Success -> {
                         val mutholaahList = resource.data
                         val mutholaah = mutholaahList?.find { it.urutan == args.mutholaah.urutan }
@@ -69,7 +69,11 @@ class MateriActivity : AppCompatActivity() {
                     }
 
                     is Resource.Error -> {
-                        Toast.makeText(this@MateriActivity, "Error: ${resource.message}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this@MateriActivity,
+                            "Error: ${resource.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
 
                     else -> Unit
@@ -79,7 +83,8 @@ class MateriActivity : AppCompatActivity() {
     }
 
     private fun isNetworkAvailable(): Boolean {
-        val connectionManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val connectionManager =
+            getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = connectionManager.activeNetworkInfo
         return networkInfo != null && networkInfo.isConnected
     }
@@ -88,7 +93,8 @@ class MateriActivity : AppCompatActivity() {
         WindowCompat.setDecorFitsSystemWindows(window, false)
         WindowInsetsControllerCompat(window, binding.videoMutholaah).let { controller ->
             controller.hide(WindowInsetsCompat.Type.systemBars())
-            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+            controller.systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
     }
 

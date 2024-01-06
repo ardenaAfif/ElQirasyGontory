@@ -14,5 +14,5 @@ data class Mutholaah(
     val video_url: String,
     val questions: Long
 ) : Parcelable {
-    constructor(): this("",0, "", "", "",0)
+    constructor() : this("", 0, "", "", "", 0)
 }

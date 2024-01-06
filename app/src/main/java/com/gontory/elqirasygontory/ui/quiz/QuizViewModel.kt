@@ -17,7 +17,7 @@ import kotlinx.coroutines.withContext
 
 private const val TAG = "QuizViewModel"
 
-class QuizViewModel: ViewModel() {
+class QuizViewModel : ViewModel() {
 
     private val firebaseFirestore = FirebaseCommon()
 
@@ -232,7 +232,7 @@ class QuizViewModel: ViewModel() {
         _optionC.value = answers.getOrNull(0) ?: ""
         _optionD.value = answers.getOrNull(0) ?: ""
 
-        answers  = answers.filter { it.isNotEmpty() }.toMutableList()
+        answers = answers.filter { it.isNotEmpty() }.toMutableList()
 
         for (i in 0 until answers.size) {
             val j = (0..i).random()

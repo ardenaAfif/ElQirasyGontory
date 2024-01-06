@@ -3,7 +3,6 @@ package com.gontory.elqirasygontory.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
@@ -12,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.data.Mutholaah
 import com.gontory.elqirasygontory.databinding.ItemMutholaahBinding
-import com.gontory.elqirasygontory.ui.mutholaah.MutholaahFragmentDirections
 import com.gontory.elqirasygontory.ui.quiz.IkhtibarFragmentDirections
 
 class IkhtibarAdapter(private val context: Context):

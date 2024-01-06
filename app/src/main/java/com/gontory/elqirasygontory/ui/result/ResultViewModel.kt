@@ -13,7 +13,7 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class ResultViewModel: ViewModel() {
+class ResultViewModel : ViewModel() {
 
     private val firebaseFirestore = FirebaseCommon()
 

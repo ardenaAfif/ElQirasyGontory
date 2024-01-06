@@ -1,18 +1,17 @@
 package com.gontory.elqirasygontory.ui.quiz
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.databinding.FragmentQuizBinding
-import com.gontory.elqirasygontory.utils.Resource
 
 class QuizFragment : Fragment() {
 
@@ -82,7 +81,8 @@ class QuizFragment : Fragment() {
 
         quizViewModel.shouldNavigateToResult.observe(viewLifecycleOwner, Observer {
             if (it) {
-                this.findNavController().navigate(QuizFragmentDirections.actionQuizFragmentToResultFragment(args.QuizData))
+                this.findNavController()
+                    .navigate(QuizFragmentDirections.actionQuizFragmentToResultFragment(args.QuizData))
                 quizViewModel.navigateToResultPageComplete()
             }
         })
@@ -138,19 +138,22 @@ class QuizFragment : Fragment() {
     private fun highlightCorrectAnswer(correctAnswer: String) {
 
         binding.apply {
-            when(correctAnswer) {
+            when (correctAnswer) {
                 optionA.text -> {
                     setButtonBackground(optionA, true)
                     optionA.setTextColor(resources.getColor(R.color.white, null))
                 }
+
                 optionB.text -> {
                     setButtonBackground(optionB, true)
                     optionB.setTextColor(resources.getColor(R.color.white, null))
                 }
+
                 optionC.text -> {
                     setButtonBackground(optionC, true)
                     optionC.setTextColor(resources.getColor(R.color.white, null))
                 }
+
                 optionD.text -> {
                     setButtonBackground(optionD, true)
                     optionD.setTextColor(resources.getColor(R.color.white, null))

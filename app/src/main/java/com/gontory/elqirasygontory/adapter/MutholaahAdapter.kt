@@ -62,7 +62,8 @@ class MutholaahAdapter(private val context: Context) :
         holder.bind(mutholaah)
 
         holder.itemView.setOnClickListener {
-            val action = MutholaahFragmentDirections.actionMutholaahFragmentToMateriActivity(mutholaah)
+            val action =
+                MutholaahFragmentDirections.actionMutholaahFragmentToMateriActivity(mutholaah)
             holder.itemView.findNavController().navigate(action)
         }
     }

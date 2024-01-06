@@ -51,7 +51,7 @@ El Qirasy Gontory is a dynamic mobile application tailored for language learners
 ## Technical Requirements:
 - Compatible with Android devices
 - Min. Android 7.0
-- Regular updates for new stories, quizzes, bug fixes, and performance improvements
+- Non Foldable Device
 
 ## Note:
 El Qirasy Gontory strives not only to be an effective Arabic language learning tool but also an educational and inspiring experience. By incorporating videos and quizzes, the app aims to make language acquisition engaging, comprehensive, and tailored to the diverse learning preferences of users.

@@ -11,6 +11,14 @@
         <item name="cornerFamilyTopRight">rounded</item>
         <item name="cornerFamilyBottomRight">rounded</item>
         <item name="cornerSize">30dp</item>
+    </style>
+    
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
 
+        <!--  Non selected color -->
+        <item name="colorControlNormal">@color/grey</item>
+
+        <!--   Selected color -->
+        <item name="colorControlActivated">@color/red_500</item>
     </style>
 </resources>

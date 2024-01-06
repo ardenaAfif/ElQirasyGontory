@@ -1,6 +1,7 @@
 package com.gontory.elqirasygontory.ui.about
 
 import android.content.pm.PackageManager
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.gontory.elqirasygontory.R
 import com.gontory.elqirasygontory.databinding.FragmentAboutBinding
+import com.gontory.elqirasygontory.ui.rate.RateUsDialog
 
 class AboutFragment : Fragment() {
 
@@ -33,7 +35,18 @@ class AboutFragment : Fragment() {
 
             val versionName = getVersionName()
             version.text = "Version $versionName"
+
+            btnRate.setOnClickListener {
+                showRatingDialog()
+            }
         }
+    }
+
+    private fun showRatingDialog() {
+        val rateUsDialog = RateUsDialog(requireContext())
+        rateUsDialog.window?.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.transparant)))
+        rateUsDialog.setCancelable(false)
+        rateUsDialog.show()
     }
 
     private fun getVersionName(): String {

@@ -6,13 +6,16 @@
     <string name="about">حول التطبيق</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="about_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida tristique massa, ac consectetur tortor tincidunt sit amet. Donec feugiat lacus eget augue luctus, non maximus leo dignissim. In ullamcorper ex rhoncus ex fermentum mattis. Ut eu aliquet augue, quis tincidunt massa. Sed sapien massa, dignissim non ex et, ullamcorper vestibulum erat. Etiam commodo velit nec lorem accumsan ullamcorper et vitae massa. Etiam id nunc ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eget tincidunt sapien. Sed quis tortor orci. Mauris gravida, lacus eu venenatis consequat, quam nibh posuere est, vel porttitor felis velit ac dui. Aliquam ultricies mollis condimentum. Curabitur vel mauris felis. Nunc orci tortor, vulputate in varius sed, fermentum quis felis. Ut tincidunt nisl turpis, nec egestas leo pretium eget. Nunc volutpat convallis nulla.</string>
     <string name="next_question">السؤال التالي</string>
     <string name="score_over">%1$d/%2$d</string>
 
     <string name="congrats">مُبَارَكٌ</string>
     <string name="try_again">حاول ثانية</string>
 
+    <string name="about_desc">Aplikasi El Qirasy Gontory merupahkan platform yang menghadirkan kisah-kisah menarik yang diambil dari buku "al-Qiroatur Rasyidah" karya Abdul Fattah Shobri Bek dan Ali Umar Bek. Tujuan utama dari pelajaran Mutholaah ini adalah untuk mengasah kemampuan berbicara dalam bahasa Arab dengan memanfaatkan metode story-telling. Melalui narasi-narasi yang autentik, pengguna dapat memperkaya kosakata, tetapi juga untuk memahami konteks budaya dan memotivasi pengembangan keterampilan berbicara secara lebih efektif. Dengan pendekatan ini, El Qirasy Gontory tidak hanya menjadi sumber pembelajaran bahasa Arab yang efektif tetapi juga pengalaman edukatif yang memikat dan inspiratif.</string>
+
     <string name="congrats_message">بَارَكَ اَللهُ عَلٰى نَجَاحِكَ فِيْ الاختبار</string>
     <string name="failed_message">تَعَاظَمَ الفشلُ فِيْ الاختبار</string>
+    <string name="rate_us">Rate Our Apps</string>
+    <string name="rate_us_desc">If you\'re enjoy using our app.\n Would you mind rating us?</string>
 </resources>

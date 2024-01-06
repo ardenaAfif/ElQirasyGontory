@@ -34,10 +34,15 @@ El Qirasy Gontory is a dynamic mobile application tailored for language learners
 1. Visit the official El Qirasy Gontory GitHub repository at [GitHub Repository Link](https://github.com/ardenaAfif/ElQirasyGontory).
 2. Navigate to the "Releases" section on the repository page.
 3. Find the latest release version and select the downloadable application package compatible with your device (APK for Android).
-4. Download the application package to your device.
-5. Enable installation from third-party sources on your device settings if required.
-6. Install El Qirasy Gontory on your device by following the on-screen instructions.
-7. Open the app, explore the stories, and start your interactive language learning journey.
+
+  OR
+
+[Click to Download](https://github.com/ardenaAfif/ElQirasyGontory/releases/tag/1.0.0-beta1)
+
+5. Download the application package to your device.
+6. Enable installation from third-party sources on your device settings if required.
+7. Install El Qirasy Gontory on your device by following the on-screen instructions.
+8. Open the app, explore the stories, and start your interactive language learning journey.
 
 ## Target Audience:
 - Arabic language learners

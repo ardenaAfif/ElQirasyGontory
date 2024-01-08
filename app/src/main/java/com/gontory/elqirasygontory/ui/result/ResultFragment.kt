@@ -39,7 +39,6 @@ class ResultFragment : Fragment() {
 
         resultViewModel.correctScore.observe(viewLifecycleOwner, Observer {
             binding.resultsContent.startAnimation(fadeInAnimation)
-//            binding.resultLoadProgress.startAnimation(fadeOutAnimation)
 
             binding.resultsScore.text = getString(R.string.score_over, it, args.QuizData.questions)
 

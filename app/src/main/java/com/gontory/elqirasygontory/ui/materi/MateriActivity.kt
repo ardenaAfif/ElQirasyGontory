@@ -1,6 +1,7 @@
 package com.gontory.elqirasygontory.ui.materi
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.View
@@ -12,9 +13,11 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaItem
+import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.navigation.navArgs
 import com.gontory.elqirasygontory.databinding.ActivityMateriBinding
+import com.gontory.elqirasygontory.ui.home.MainActivity
 import com.gontory.elqirasygontory.ui.mutholaah.MutholaahViewModel
 import com.gontory.elqirasygontory.utils.Resource
 import kotlinx.coroutines.flow.collectLatest
@@ -39,6 +42,16 @@ class MateriActivity : AppCompatActivity() {
 
         if (!isNetworkAvailable()) {
             Toast.makeText(this, "No Internet Connection", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnIkhtibar.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply {
+                intent.putExtra("EXTRA_NAVIGATE_TO", "QuizFragment")
+                intent.putExtra("EXTRA_MUTHOLAAH_DATA", args.mutholaah)
+            }
+
+            startActivity(intent)
+            finish()
         }
 
 
@@ -98,21 +111,24 @@ class MateriActivity : AppCompatActivity() {
         }
     }
 
-//    private fun initializeVideo(videoUrl: String) {
-//        releasePlayer()
-//
-//        val player = ExoPlayer.Builder(this).build().apply {
+    private fun initializeVideo(videoUrl: String) {
+        releasePlayer()
+
+//        player = ExoPlayer.Builder(this).build().apply {
 //            setMediaItem(MediaItem.fromUri(videoUrl))
 //            prepare()
 //            play()
 //        }
-//        binding.videoMutholaah.player = player
-//    }
-
-    private fun initializeVideo(videoUrl: String) {
-        releasePlayer()
 
         player = ExoPlayer.Builder(this).build().apply {
+            addListener(object : Player.Listener {
+                override fun onPlaybackStateChanged(playbackState: Int) {
+                    super.onPlaybackStateChanged(playbackState)
+                    if (playbackState == ExoPlayer.STATE_ENDED) {
+                        binding.btnIkhtibar.visibility = View.VISIBLE
+                    }
+                }
+            })
             setMediaItem(MediaItem.fromUri(videoUrl))
             prepare()
             play()

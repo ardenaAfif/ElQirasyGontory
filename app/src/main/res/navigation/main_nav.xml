@@ -5,6 +5,7 @@
     android:id="@+id/main_nav"
     app:startDestination="@id/homeFragment">
 
+
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.gontory.elqirasygontory.ui.home.HomeFragment"

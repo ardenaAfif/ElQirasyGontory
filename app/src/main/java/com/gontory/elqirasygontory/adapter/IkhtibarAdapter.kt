@@ -64,7 +64,6 @@ class IkhtibarAdapter(private val context: Context):
         holder.itemView.setOnClickListener {
             val action = IkhtibarFragmentDirections.actionIkhtibarFragmentToQuizFragment(mutholaah)
             holder.itemView.findNavController().navigate(action)
-//            Toast.makeText(holder.itemView.context, "Fitur ini akan segera hadir!", Toast.LENGTH_SHORT).show()
         }
     }
 }
